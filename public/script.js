@@ -24,4 +24,24 @@ document.getElementById("form-khach-hang").addEventListener("submit", async func
     alert("Có lỗi xảy ra. Vui lòng thử lại.");
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("formThemKhach");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const ten = document.getElementById("ten").value;
+    const sdt = document.getElementById("sdt").value;
+
+    db.collection("khachhang").add({
+      ten: ten,
+      sdt: sdt,
+      ngaytao: new Date()
+    }).then(() => {
+      alert("Thêm khách hàng thành công!");
+      form.reset();
+    }).catch((error) => {
+      alert("Lỗi khi thêm: " + error.message);
+    });
+  });
+});
 

@@ -14,14 +14,49 @@
         <label for="ten" class="form-label">Họ và Tên</label>
         <input type="text" class="form-control" id="ten" required>
       </div>
+
+      <div class="mb-3">
+        <label for="ngaysinh" class="form-label">Ngày Sinh</label>
+        <input type="date" class="form-control" id="ngaysinh">
+      </div>
+
       <div class="mb-3">
         <label for="sdt" class="form-label">Số Điện Thoại</label>
         <input type="tel" class="form-control" id="sdt" required>
       </div>
+
       <div class="mb-3">
-        <label for="ghichu" class="form-label">Ghi Chú</label>
-        <textarea class="form-control" id="ghichu" rows="3"></textarea>
+        <label for="sdt2" class="form-label">Số Điện Thoại 2</label>
+        <input type="tel" class="form-control" id="sdt2">
       </div>
+
+      <div class="mb-3">
+        <label for="diachi" class="form-label">Địa Chỉ</label>
+        <input type="text" class="form-control" id="diachi">
+      </div>
+
+      <div class="mb-3">
+        <label for="quocgia" class="form-label">Quốc Gia</label>
+        <input type="text" class="form-control" id="quocgia">
+      </div>
+
+      <div class="mb-3">
+        <label for="ngaykham" class="form-label">Ngày Khám Lần Đầu</label>
+        <input type="date" class="form-control" id="ngaykham">
+      </div>
+
+      <div class="mb-3">
+        <label for="nguon" class="form-label">Khách Đến Từ Nguồn</label>
+        <select class="form-select" id="nguon">
+          <option value="">-- Chọn nguồn khách --</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Zalo">Zalo</option>
+          <option value="Khách cũ giới thiệu">Khách cũ giới thiệu</option>
+          <option value="Google">Google</option>
+          <option value="Khác">Khác</option>
+        </select>
+      </div>
+
       <button type="submit" class="btn btn-primary w-100">Lưu Khách Hàng</button>
     </form>
   </div>

@@ -26,47 +26,7 @@
     </form>
   </div>
 
-  <script src="firebase.js"></script>
-  <script src="script.js"></script>
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <title>Thêm khách hàng</title>
-  <script src="firebase.js"></script>
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <h2>Thêm khách hàng mới</h2>
-  <form id="formThemKhach">
-    <label>Họ tên:</label>
-    <input type="text" id="ten" required><br><br>
-    
-    <label>Số điện thoại:</label>
-    <input type="text" id="sdt" required><br><br>
-
-    <button type="submit">Thêm</button>
-  </form>
-</body>
-</html>
-<div class="container mt-5">
-  <h2 class="text-center mb-4">Thêm khách hàng mới</h2>
-  <form id="customerForm">
-    <div class="mb-3">
-      <label for="name" class="form-label">Họ tên</label>
-      <input type="text" class="form-control" id="name" required>
-    </div>
-    <div class="mb-3">
-      <label for="phone" class="form-label">Số điện thoại</label>
-      <input type="text" class="form-control" id="phone" required>
-    </div>
-    <div class="mb-3">
-      <label for="birthday" class="form-label">Ngày sinh</label>
-      <input type="date" class="form-control" id="birthday">
-    </div>
-    <button type="submit" class="btn btn-primary">Lưu khách hàng</button>
-  </form>
-</div>
-

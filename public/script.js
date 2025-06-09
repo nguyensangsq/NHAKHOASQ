@@ -44,4 +44,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { app } from "./firebase.js";
+
+const db = getFirestore(app);
+
+document.getElementById("customerForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const birthday = document.getElementById("birthday").value;
+
+  try {
+    await addDoc(collection(db, "khachhang"), {
+      name,
+      phone,
+      birthday,
+      createdAt: new Date()
+    });
+    alert("Đã thêm khách hàng!");
+    e.target.reset();
+  } catch (error) {
+    console.error("Lỗi thêm khách hàng: ", error);
+    alert("Lỗi khi thêm khách hàng!");
+  }
+});
 
